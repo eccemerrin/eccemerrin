@@ -29,7 +29,7 @@ In each experiments we remove existing parts or add parts to existing code.
   * EQT (for comparison)
   
 
-### Models Trained On _Merged_ : ###
+### 2.1 Models Trained On _Merged_ : ###
 
 #### BCLOS ####
 BCLOS is an acronym for *BiLSTM Closed LSTM Open*.
@@ -74,7 +74,7 @@ In this architecture; I add LSTM layers, as successive layers of CNN layers, to 
  * **s_mae**, **s_rmse**, **s_tn**
  * **p_mae**, **p_rmse**
 
-### Models Trained On _STEAD-micro_ ###
+### 2.2 Models Trained On _STEAD-micro_ ###
 
 #### nb_filters_changed_EQTUtils ####
 

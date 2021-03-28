@@ -112,7 +112,7 @@ In each experiments we remove existing parts or add parts to existing code.
 
 ### 2.1 Models Trained On _Merged_ : ###
 
-#### BCLOS ####
+#### 2.1.1 BCLOS ####
 BCLOS is an acronym for *BiLSTM Closed LSTM Open*.
 
 BiLSTM's have a structure which allow them to reach information from backward and forward. However, LSTM's have a structure which allow them to reach information just from backward. 
@@ -126,7 +126,7 @@ Before seeing results, I expected that results of Unidirectional layers would be
  * **p_recall**, **p_precision**,**p_mae**, **p_rmse**, **p_tp**, **p_fp**, **p_tn**, **p_fn**
 
 
-#### BC ####
+#### 2.1.2 BC ####
 BC is an acronym for *Both Closed*. 
 
 In this architecture, I removed both BiLSTM layers and added LSTM layers  from the common layers mentioned in [Google doc](https://docs.google.com/document/d/1JxLc_Bp0wNTSlZUpWlf_87riHRQKDenNGf665mFMVpQ/edit#heading=h.moi7c1x12w31).
@@ -136,7 +136,7 @@ As expected, result of this architecture was worse than **BCLOS**. *BC* was bett
  * **s_rmse**, **s_tn**
  * **p_precision**, **p_mae**, **p_rmse**, **p_fp**, **p_tn**
 
-#### Partial Vanilla ####
+#### 2.1.3 Partial Vanilla ####
 
 In *Partial Vanilla* architecture, I removed BiLSTM layers and CNN Layers from the common layers mentioned in [Google doc](https://docs.google.com/document/d/1JxLc_Bp0wNTSlZUpWlf_87riHRQKDenNGf665mFMVpQ/edit#heading=h.moi7c1x12w31).
 
@@ -145,7 +145,7 @@ In *Partial Vanilla* architecture, I removed BiLSTM layers and CNN Layers from t
  * **s_mae**, **s_rmse**, **s_tn**
  * **p_recall**, **p_mae**, **p_rmse**, **p_fn**
 
-#### BO ####
+#### 2.1.4 BO ####
 BO is an acronym for *Both Open*.
 
 In this architecture; I add LSTM layers, as successive layers of CNN layers, to the common layers mentioned in [Google doc](https://docs.google.com/document/d/1JxLc_Bp0wNTSlZUpWlf_87riHRQKDenNGf665mFMVpQ/edit#heading=h.moi7c1x12w31). 
@@ -157,7 +157,7 @@ In this architecture; I add LSTM layers, as successive layers of CNN layers, to 
 
 ### 2.2 Models Trained On _STEAD-micro_ ###
 
-#### nb_filters_changed_EQTUtils ####
+#### 2.2.1 nb_filters_changed_EQTUtils ####
 
 In *nb_filters_changed model* we changed the filter size in EqT_utils.py (line=2734). The filter sizes we changed in Eqt_utils.py are related to last CNN block's filter sizes in the architecture mentioned in [Google doc](https://docs.google.com/document/d/1JxLc_Bp0wNTSlZUpWlf_87riHRQKDenNGf665mFMVpQ/edit#heading=h.moi7c1x12w31). The orginal fiter sizes were nb_filters=[8, 16, 16, 32, 32, 96, 96, 128] then, changed to nb_filters=[8, 16, 16, 32, 32, 64, 64, 128].
 
@@ -167,7 +167,7 @@ In *nb_filters_changed model* we changed the filter size in EqT_utils.py (line=2
 * **s_recall**, **s_mae**, **s_rmse**, **s_tp**, **s_fp**
 * **#events**
 
-#### kernel_size_changed ####
+#### 2.2.2 kernel_size_changed ####
 
 In *kernel_size_changed model* we changed the kernel sizes in trainer.py (line=417). The kernel sizes we changed in trainer.py are realted to the first CNN block's kernel sizes in the architecture mentioned in [Google doc](https://docs.google.com/document/d/1JxLc_Bp0wNTSlZUpWlf_87riHRQKDenNGf665mFMVpQ/edit#heading=h.moi7c1x12w31). The original kernel sizes were kernel_size=[11, 9, 7, 7, 5, 5, 3] then, changed to kernel_size=[10, 9, 8, 7, 6, 5, 4].
 
@@ -177,7 +177,7 @@ In *kernel_size_changed model* we changed the kernel sizes in trainer.py (line=4
 * **s_precision**, **s_tp**, **s_fn**
 * **#events**
 
-#### nb_filters_changed_trainer ####
+#### 2.2.3 nb_filters_changed_trainer ####
 
 In *nb_filters_changed_trainer* model we changed the filter sizes in trainer.py (line=416). The filter sizes we changed in trainer.py are related to the first CNN block's filter sizes in the architecture mentioned in [Google doc](https://docs.google.com/document/d/1JxLc_Bp0wNTSlZUpWlf_87riHRQKDenNGf665mFMVpQ/edit#heading=h.moi7c1x12w31). The original filter sizes were nb_filters=[8, 16, 16, 32, 32, 64, 64] then, changed to nb_filters=[8, 8, 32, 32, 128, 128, 128].
 

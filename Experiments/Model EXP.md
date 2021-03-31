@@ -191,7 +191,7 @@ In *nb_filters_changed_trainer* model we changed the filter sizes in trainer.py 
 By visualising weights and outputs for a given layer we can gain insight about how each layer contribute to the model.
 ## 3.1 Convolution layers
 The model has convolution layers with variable kernel size, mainly used for downsampling and upsampling at both ends of the model.
-###3.1.1 Filters
+### 3.1.1 Filters
 We can visualise the filters of the CNN layers. Each layer has a specific kernel size(think it as a 1-D window for our case), these kernels slide through the data (overlapping some points) looking for features in these windows and training through back-propagation. We can plot these filters and see what each "convolution layer window" look like.
 
     from keras import backend as K
